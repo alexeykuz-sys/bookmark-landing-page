@@ -1,0 +1,12 @@
+@mixin btn($primary:false) {
+    font-size: $fontRubik;
+    font-weight: weight(medium);
+    padding: 10px 20px;
+    border: 0;
+    @include set-bg-color($softBlue);
+
+    @if $primary {
+        @include set-bg-color(white);
+        
+    }
+}

@@ -1,0 +1,60 @@
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@function set-text-color($bg-color) {
+  @if (lightness($bg-color) > 70) {
+    @return $veryDarkBlue;
+  } @else {
+    @return white;
+  }
+}
+
+@mixin set-bg-color($bg-color) {
+  background-color: $bg-color;
+  color: set-text-color($bg-color);
+}
+
+@mixin boxShadow($color) {
+  box-shadow: -1px -1px 20px $color, 5px 5px 15px $color;
+  outline: none;
+}
+
+
+@mixin header($color,$weight,$fontsize) {
+    font-size: $fontsize;
+    color: $color;
+    font-weight: weight($weight);
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+// Media Queries
+
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+@mixin tablet {
+  @media (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop * 1px) {
+    @content;
+  }
+}

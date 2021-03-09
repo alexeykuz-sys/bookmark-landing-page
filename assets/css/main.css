@@ -44,10 +44,10 @@ body {
 }
 
 .navbar-nav li a {
-  color: #5368df;
+  color: #252b46;
   list-style: none;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16.2px;
   font-family: "Rubik", Helvetica, sans-serif;
   font-weight: 400;
   padding: 20px;
@@ -57,4 +57,79 @@ body {
 .login-btn {
   margin-right: 55px;
   padding: 5px 25px;
+  background-color: #fa5757;
+  color: white;
+}
+
+.hero-wrapper {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .hero-wrapper {
+    flex-direction: row-reverse;
+  }
+}
+
+.hero-text-wrapper {
+  margin-top: 60px;
+}
+
+.hero-text-wrapper h1 {
+  font-size: 54px;
+  color: #252b46;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.hero-text-wrapper p {
+  color: #9194a1;
+}
+
+.btn-get-chrome {
+  font-size: "Rubik";
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #5368df;
+  color: white;
+}
+
+.btn-get-firefox {
+  font-size: "Rubik";
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #5368df;
+  color: white;
+  background-color: white;
+  color: #252b46;
+  box-shadow: -1px -1px 20px #e0dbdb, 5px 5px 15px #e0dbdb;
+  outline: none;
+  margin-left: 5px;
+}
+
+.feature-header {
+  margin-top: 60px;
+  font-size: 32.4px;
+  color: #252b46;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+
+.bookmark-wrapper {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .bookmark-wrapper {
+    flex-direction: row;
+  }
 }
