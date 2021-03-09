@@ -1,1 +1,60 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+* {
+  padding: 0;
+  border: 0;
+}
+
+html {
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+}
+
+body {
+  font-family: "Rubik", Helvetica, sans-serif;
+  min-height: 100vh;
+  font-size: 18px;
+  background-color: white;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.navbar-toggler {
+  right: 15px;
+  margin: 0 auto;
+  position: fixed;
+}
+
+.bar-icon {
+  color: #252b46;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-nav {
+  align-items: center;
+  margin-right: 15px;
+}
+
+.navbar-nav li a {
+  color: #5368df;
+  list-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Rubik", Helvetica, sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.login-btn {
+  margin-right: 55px;
+  padding: 5px 25px;
+}
