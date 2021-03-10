@@ -83,12 +83,18 @@ body {
 }
 
 .hero-text-wrapper h1 {
-  font-size: 54px;
+  font-size: 36px;
   color: #252b46;
   font-weight: 500;
   letter-spacing: 3px;
   margin-bottom: 40px;
-  margin-bottom: 40px;
+  margin: 40px auto;
+}
+
+@media (min-width: 768px) {
+  .hero-text-wrapper h1 {
+    margin-right: 10px;
+  }
 }
 
 .hero-text-wrapper p {
@@ -227,7 +233,7 @@ hr {
 .card {
   width: 19rem;
   height: 20rem;
-  margin: 10px;
+  margin: 10px auto;
   box-shadow: -1px -1px 20px #d4d1d1, 5px 5px 15px #d4d1d1;
   outline: none;
   display: flex;
@@ -259,4 +265,131 @@ hr {
 
 .question-header {
   margin-top: 90px;
+}
+
+.btn-more-info {
+  font-size: "Rubik";
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #5368df;
+  color: white;
+  margin-top: 20px;
+}
+
+.contact-wrapper {
+  background-color: #5368df;
+  color: white;
+  margin-top: 60px;
+  padding: 40px;
+}
+
+.contact-wrapper .contact-text-wrapper {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact-wrapper .contact-text-wrapper .join {
+  font-size: 12.6px;
+  margin-bottom: 20px;
+}
+
+.contact-area {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .contact-area {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  }
+}
+
+.contact-area form {
+  height: 36px;
+  width: 100%;
+  margin: 15px;
+}
+
+@media (min-width: 1024px) {
+  .contact-area form {
+    width: 60%;
+  }
+}
+
+.contact-area .contact-btn {
+  margin: 15px;
+  background-color: #fa5757;
+  color: white;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .contact-area .contact-btn {
+    width: 31%;
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+.footer {
+  background-color: #252b46;
+  color: white;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+@media (min-width: 1024px) {
+  .footer-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.footer-wrapper .logo img {
+  cursor: pointer;
+  color: white;
+}
+
+.footer-wrapper .footer-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .footer-wrapper .footer-menu ul {
+    flex-direction: row;
+    margin: 0;
+  }
+}
+
+.footer-wrapper .footer-menu ul li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 16.2px;
+  font-family: "Rubik", Helvetica, sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.footer-wrapper .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px;
+  cursor: pointer;
 }

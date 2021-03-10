@@ -68,8 +68,11 @@
 }
 
 .hero-text-wrapper h1 {
-  @include header($veryDarkBlue, medium, $fontSize * 3);
-  margin-bottom: 40px;
+  @include header($veryDarkBlue, medium, $fontSize * 2);
+  margin: 40px auto;
+  @include tablet {
+      margin-right: 10px;
+  }
 }
 .hero-text-wrapper p {
   color: $grayishBlue;
@@ -160,7 +163,7 @@ hr {
 // cards
 
 .card-wrapper {
-    margin-top: 30px;
+  margin-top: 30px;
   display: inline;
   align-items: center;
   flex-direction: column;
@@ -185,7 +188,7 @@ hr {
 .card {
   width: 19rem;
   height: 20rem;
-  margin: 10px;
+  margin: 10px auto; 
   @include boxShadow(rgb(212, 209, 209));
   display: flex;
   flex-direction: column;
@@ -202,18 +205,120 @@ hr {
       margin: 20px;
       width: 50%;
     }
-    
   }
   & .dots {
     width: 90%;
   }
   .cards-button-wrapper {
-      margin: 30px;
+    margin: 30px;
   }
-  
 }
 
-// question section 
-.question-header{
-    margin-top: 90px;
+// question section
+.question-header {
+  margin-top: 90px;
+}
+
+.btn-more-info{
+    @include btn($primary: false);
+    margin-top: 20px;
+}
+// contact-area
+
+.contact-wrapper {
+  @include set-bg-color($softBlue);
+  margin-top: 60px;
+  padding: 40px;
+  & .contact-text-wrapper {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: set-text-color($veryDarkBlue);
+
+    & .join {
+      font-size: $fontSize * 0.7;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contact-area {
+  display: flex;
+  flex-direction: column;
+  @include large {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  }
+  & form {
+    height: 36px;
+    width: 100%;
+    margin: 15px;
+
+    @include large {
+      width: 60%;
+    }
+  }
+
+  & .contact-btn {
+    margin: 15px;
+
+    @include set-bg-color($softRed);
+    width: 100%;
+    @include large {
+      width: 31%;
+      float: right;
+      margin-right: 10px;
+    }
+  }
+}
+
+.footer{
+
+    @include set-bg-color($veryDarkBlue);
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  @include large {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  & .logo img{
+    cursor: pointer;
+    color: set-text-color($veryDarkBlue);
+  }
+
+  & .footer-menu ul{
+    display: flex;
+    flex-direction: column;
+    @include large{
+        flex-direction: row;
+        margin: 0;
+    }
+    
+
+    &  li {
+      list-style: none;
+      text-decoration: none;
+      font-size: $fontSize * 0.9;
+      font-family: $font-stack;
+      font-weight: weight(regular);
+      padding: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  & .social-media {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100px;
+      cursor: pointer;
+  }
 }
