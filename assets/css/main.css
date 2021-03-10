@@ -73,6 +73,11 @@ body {
   }
 }
 
+.hero-image,
+.features-image {
+  width: 100%;
+}
+
 .hero-text-wrapper {
   margin-top: 60px;
 }
@@ -110,7 +115,7 @@ body {
   color: #252b46;
   box-shadow: -1px -1px 20px #e0dbdb, 5px 5px 15px #e0dbdb;
   outline: none;
-  margin-left: 5px;
+  margin: 5px;
 }
 
 .feature-header {
@@ -120,6 +125,11 @@ body {
   font-weight: 500;
   letter-spacing: 3px;
   margin-bottom: 40px;
+}
+
+.feature-2,
+.feature-3 {
+  display: none;
 }
 
 .bookmark-wrapper {
@@ -132,4 +142,121 @@ body {
   .bookmark-wrapper {
     flex-direction: row;
   }
+}
+
+.bookmark-text-wrapper {
+  margin-top: 60px;
+}
+
+.bookmark-text-wrapper p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.bookmark-text-wrapper .button-wrapper {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .bookmark-text-wrapper {
+    margin: 60px 0 0 100px;
+  }
+  .bookmark-text-wrapper p {
+    margin-top: 30px;
+    text-align: left;
+  }
+  .bookmark-text-wrapper .button-wrapper {
+    display: block;
+  }
+}
+
+.tab-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #252b46;
+  list-style: none;
+  text-decoration: none;
+  font-size: 16.2px;
+  font-family: "Rubik", Helvetica, sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .tab-list {
+    flex-direction: row;
+  }
+}
+
+.tab-list .nav-link.active {
+  border-bottom: 4px solid #fa5757;
+}
+
+hr {
+  border: 2px solid #9194a1;
+}
+
+.card-wrapper {
+  margin-top: 30px;
+  display: inline;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+}
+
+@media (min-width: 1024px) {
+  .card-wrapper {
+    flex-direction: row;
+    display: flex;
+  }
+  .card-wrapper .card-opera {
+    align-self: flex-end;
+  }
+  .card-wrapper .card-firefox {
+    align-self: center;
+  }
+  .card-wrapper .card-chrome {
+    align-self: flex-start;
+  }
+}
+
+.card {
+  width: 19rem;
+  height: 20rem;
+  margin: 10px;
+  box-shadow: -1px -1px 20px #d4d1d1, 5px 5px 15px #d4d1d1;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+
+.card .card-body img {
+  margin: 20px;
+  width: 50%;
+}
+
+.card .dots {
+  width: 90%;
+}
+
+.card .cards-button-wrapper {
+  margin: 30px;
+}
+
+.question-header {
+  margin-top: 90px;
 }
