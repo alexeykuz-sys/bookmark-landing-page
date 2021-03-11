@@ -1,45 +1,50 @@
-const hamburgerBtn = document.getElementById('hamburger-icon');
-const modal = document.getElementById('modal');
-const listBtnsArray = Array.from(document.querySelectorAll('.feature-tab'))
-const closeBtn = document.getElementById('modal-close');
-const simpleTab=document.getElementById('simple-tab');
-const speedyTab=document.getElementById('speedy-tab');
-const easyTab=document.getElementById('easy-tab');
-const featureTab = document.querySelector('.features');
-const featureTab1 = document.getElementById('feature-1');
-const featureTab2 = document.getElementById('feature-2');
-const featureTab3 = document.getElementById('feature-3');
-const tabWrapper = document.querySelector('.tab-wrapper')
+const hamburgerBtn = document.getElementById("hamburger-icon");
+const modal = document.getElementById("modal");
+const listBtnsArray = Array.from(document.querySelectorAll(".tab"));
+const closeBtn = document.getElementById("modal-close");
+const simpleTab = document.getElementById("simple-tab");
+const speedyTab = document.getElementById("speedy-tab");
+const easyTab = document.getElementById("easy-tab");
+const featureRef = document.querySelector(".features");
+const featureTab1 = document.getElementById("feature-1");
+const featureTab2 = document.getElementById("feature-2");
+const featureTab3 = document.getElementById("feature-3");
+const tabWrapper = document.querySelector(".tab-wrapper");
 
 function hamburgerHandler() {
-    modal.classList.add('show');
+  modal.classList.add("show");
 }
-hamburgerBtn.addEventListener('click', hamburgerHandler);
+hamburgerBtn.addEventListener("click", hamburgerHandler);
 
 function modalClose() {
-    modal.classList.remove('show');
+  modal.classList.remove("show");
 }
 
-closeBtn.addEventListener('click', modalClose);
-
-let featuresTabArray = Array.from(featureTab.children)
-
-console.log(featuresTabArray)
-
-featuresTabArray.forEach(feature=>{
-    listBtnsArray.forEach(btn => btn.addEventListener('click', (e) =>{
-        
-    
-        
-
-    }))
+closeBtn.addEventListener("click", modalClose);
 
     
-    //     console.log(featureTab.className)
-    //     if(e.target.className === featureTab.className){
-    //         featureTab.classList.add('show')
-    //     } else if (!e){
-    //         featureTab.remove('show')
-    //     }
-     
-});
+const toggleElem1 = () => {
+    if(document.getElementById('simple-tab').style.display = 'none'){
+        document.getElementById('simple-tab').style.display = 'flex'
+        document.getElementById('speedy-tab').style.display = 'none'
+        document.getElementById('easy-tab').style.display = 'none'
+        
+    } 
+    
+}
+
+const toggleElem2 = () => {
+    if(document.getElementById('speedy-tab').style.display = 'none'){
+    document.getElementById('speedy-tab').style.display = 'flex'
+    document.getElementById('simple-tab').style.display = 'none'
+    document.getElementById('easy-tab').style.display = 'none'
+} 
+}
+
+const toggleElem3 = () => {
+    if(document.getElementById('easy-tab').style.display = 'none'){
+    document.getElementById('easy-tab').style.display = 'flex'
+    document.getElementById('speedy-tab').style.display = 'none'
+    document.getElementById('simple-tab').style.display = 'none'
+    }
+}

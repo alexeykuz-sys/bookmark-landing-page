@@ -160,16 +160,16 @@
     <div class="tab-wrapper text-center">
       <ul class="nav-tabs tab-list">
         <hr />
-        <li id="simple-tab" class="feature-tab show">Simple Bookmarking</li>
+        <li onclick="toggleElem1()" class="simple-tab ">Simple Bookmarking</li>
         <hr />
-        <li id="speedy-tab" class="feature-tab">Speedy Searching</li>
+        <li  onclick="toggleElem2()" class=" speedy-tab">Speedy Searching</li>
         <hr />
-        <li id="easy-tab" class="feature-tab">Easy Sharing</li>
+        <li  onclick="toggleElem3()" class=" easy-tab">Easy Sharing</li>
         <hr />
       </ul>
     </div>
     <div class="features">
-      <div class="feature-1 show">
+      <div id="simple-tab" class="simple-tab">
         <div class="container">
           <div class="row">
             <div class="bookmark-wrapper">
@@ -201,7 +201,7 @@
           </div>
         </div>
       </div>
-      <div class="feature-2 hide">
+      <div id="speedy-tab" class="speedy-tab 2 hide">
         <div class="container">
           <div class="row">
             <div class="bookmark-wrapper">
@@ -234,7 +234,7 @@
           </div>
         </div>
       </div>
-      <div class="feature-3 hide">
+      <div id="easy-tab" class="easy-tab 3 hide">
         <div class="container">
           <div class="row">
             <div class="bookmark-wrapper">

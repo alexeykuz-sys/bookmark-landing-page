@@ -235,9 +235,9 @@ body {
   margin-bottom: 40px;
 }
 
-.feature-1.hide,
-.feature-2.hide,
-.feature-3.hide {
+.simple-tab.hide,
+.speedy-tab.hide,
+.easy-tab.hide {
   display: none;
 }
 
@@ -371,6 +371,14 @@ hr {
   margin-top: 90px;
 }
 
+.accordion-header button:hover {
+  color: #fa5757;
+}
+
+.accordion-button::after {
+  color: #fa5757;
+}
+
 .btn-more-info {
   font-size: "Rubik";
   font-weight: 500;
@@ -424,7 +432,7 @@ hr {
 }
 
 .contact-area form {
-  height: 36px;
+  height: 40px;
   width: 100%;
   margin: 15px;
 }
@@ -433,6 +441,13 @@ hr {
   .contact-area form {
     width: 60%;
   }
+}
+
+.contact-area form input:invalid {
+  background-image: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  right: 0;
 }
 
 .contact-area .contact-btn {
@@ -508,10 +523,18 @@ hr {
   cursor: pointer;
 }
 
+.footer-wrapper .footer-menu ul li:hover {
+  color: #fa5757;
+}
+
 .footer-wrapper .social-media {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100px;
   cursor: pointer;
+}
+
+.footer-wrapper .social-media img:hover {
+  background-color: #fa5757;
 }
