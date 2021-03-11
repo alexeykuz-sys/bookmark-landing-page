@@ -116,6 +116,7 @@
       <div class="row">
         <div class="hero-wrapper">
           <div class="col col-sm-12 col-md-6">
+            <!-- <div class="shape"></div> -->
             <div class="hero-img-wrapper">
               <img
                 class="hero-image"
@@ -160,11 +161,11 @@
     <div class="tab-wrapper text-center">
       <ul class="nav-tabs tab-list">
         <hr />
-        <li onclick="toggleElem1()" class="simple-tab ">Simple Bookmarking</li>
+        <li onclick="toggleElem1()" class="simple-tab">Simple Bookmarking</li>
         <hr />
-        <li  onclick="toggleElem2()" class=" speedy-tab">Speedy Searching</li>
+        <li onclick="toggleElem2()" class="speedy-tab">Speedy Searching</li>
         <hr />
-        <li  onclick="toggleElem3()" class=" easy-tab">Easy Sharing</li>
+        <li onclick="toggleElem3()" class="easy-tab">Easy Sharing</li>
         <hr />
       </ul>
     </div>
@@ -496,13 +497,14 @@
                   <input
                     type="email"
                     class="form-control"
-                    id="exampleInputEmail1"
+                    id="exampleInputEmail"
                     aria-describedby="emailHelp"
                     placeholder="Enter your email address"
                   />
                 </div>
+                <div id="response"></div>
               </form>
-              <button class="contact-btn btn" type="submit">Contact Us</button>
+              <button id="contact-btn" class="contact-btn btn" type="submit">Contact Us</button>
             </div>
           </div>
         </div>

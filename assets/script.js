@@ -1,15 +1,7 @@
 const hamburgerBtn = document.getElementById("hamburger-icon");
 const modal = document.getElementById("modal");
-const listBtnsArray = Array.from(document.querySelectorAll(".tab"));
 const closeBtn = document.getElementById("modal-close");
-const simpleTab = document.getElementById("simple-tab");
-const speedyTab = document.getElementById("speedy-tab");
-const easyTab = document.getElementById("easy-tab");
-const featureRef = document.querySelector(".features");
-const featureTab1 = document.getElementById("feature-1");
-const featureTab2 = document.getElementById("feature-2");
-const featureTab3 = document.getElementById("feature-3");
-const tabWrapper = document.querySelector(".tab-wrapper");
+
 
 function hamburgerHandler() {
   modal.classList.add("show");
@@ -47,4 +39,23 @@ const toggleElem3 = () => {
     document.getElementById('speedy-tab').style.display = 'none'
     document.getElementById('simple-tab').style.display = 'none'
     }
+}
+
+var emailField = document.getElementById("exampleInputEmail");
+var button = document.getElementById("contact-btn");
+var response = document.getElementById("response");
+
+button.addEventListener("click", function () {
+  var email = emailField.value;
+  if (validateEmail(email)) {
+    response.innerHTML = "";
+  } else {
+    response.innerHTML = "Whoops, make sure it's an email";
+    response.classList.toggle('show');
+  }
+});
+
+function validateEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }

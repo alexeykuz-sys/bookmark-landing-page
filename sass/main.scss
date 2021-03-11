@@ -119,6 +119,18 @@
     }
   }
 }
+// shape
+
+.shape{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:30%;
+    right: 0;
+    background-color: $softBlue;
+    z-index: -100;
+}
+
 // hero image
 .hero-wrapper {
   display: flex;
@@ -298,14 +310,23 @@ hr {
 
 // accordion
 
-.accordion-header button:hover{
-    color: $softRed;
+.accordion-header button:hover {
+  color: $softRed;
 }
-
-.accordion-button::after{
+.accordion-button {
+  color: $veryDarkBlue;
+  font-size: $fontSize*0.9;
+  font-weight: weight(regular);
+  
+  .accordion-button:after {
     color: $softRed;
+  }
 }
-
+.accordion-body{
+    color: $grayishBlue;
+    font-size: $fontSize;
+    align-items: center;
+}
 
 .btn-more-info {
   @include btn($softBlue);
@@ -350,13 +371,12 @@ hr {
       width: 60%;
     }
     & input:invalid {
-        background-image: url(/images/icon-error.svg);
-        background-repeat: no-repeat;
-        background-position: right;
-        right: 0;
-
+      background-image: url(/images/icon-error.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+      right: 0;
     }
-    
+   
   }
 
   & .contact-btn {
@@ -368,10 +388,22 @@ hr {
       float: right;
       margin-right: 10px;
     }
+
   }
 }
-
-
+#response {
+    display: none;
+}
+#response.show{
+    background-color: $softRed;
+    font-size: $fontSize* 0.7;
+    display: flex;
+    align-self: flex-start;
+    padding:  3px;
+    // position: absolute;
+    width: 100%;
+    border-radius: 3px;
+}
 
 .footer {
   @include set-bg-color($veryDarkBlue);
@@ -409,7 +441,7 @@ hr {
       cursor: pointer;
 
       &:hover {
-          color:$softRed;
+        color: $softRed;
       }
     }
   }
@@ -421,7 +453,7 @@ hr {
     cursor: pointer;
 
     & img:hover {
-        background-color:$softRed;
-    }   
+      background-color: $softRed;
+    }
   }
 }
