@@ -35,6 +35,13 @@ $font-weights: (
     margin-bottom: 40px;
 }
 
+@mixin flexBox($display, $align, $justify){
+  display:$display;
+  align-items:$align;
+  justify-content:$justify;
+
+}
+
 // Media Queries
 
 $tablet: 768;

@@ -86,10 +86,11 @@
       color: set-text-color($veryDarkBlue);
     }
     & .modal-nav-wrapper {
-      display: flex;
-      justify-content: space-between;
+        @include flexBox(flex, center, space-between);
+    //   display: flex;
+    //   justify-content: space-between;
       width: 100%;
-      align-items: center;
+    //   align-items: center;
       margin-bottom: 10px;
     }
     & .modal-menu ul,
@@ -98,6 +99,7 @@
       flex-direction: column;
       padding-left: 0;
       align-items: center;
+      width: 100%;
 
       & li {
         list-style: none;
@@ -121,14 +123,14 @@
 }
 // shape
 
-.shape{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top:30%;
-    right: 0;
-    background-color: $softBlue;
-    z-index: -100;
+.shape {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  background-color: $softBlue;
+  z-index: -100;
 }
 
 // hero image
@@ -220,10 +222,11 @@
   }
 }
 .tab-list {
-  display: flex;
+    @include flexBox(flex, center, space-evenly);
+//   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+//   align-items: center;
+//   justify-content: space-evenly;
   color: $veryDarkBlue;
   list-style: none;
   text-decoration: none;
@@ -242,21 +245,23 @@
   }
 }
 
-// .tab-list .nav-link.active {
-//   border-bottom: 4px solid $softRed;
-// }
 hr {
-  border: 2px solid $grayishBlue;
+  border: 1px solid $grayishBlue;
+  width: 100%;
+  @include large{
+      display: none;
+  }
 }
 
 // cards
 
 .card-wrapper {
   margin-top: 30px;
-  display: inline;
-  align-items: center;
+  @include flexBox(inline, center, center);
+//   display: inline;
+//   align-items: center;
   flex-direction: column;
-  justify-content: center;
+//   justify-content: center;
   height: 500px;
   @include large {
     flex-direction: row;
@@ -265,6 +270,7 @@ hr {
     & .card-opera {
       align-self: flex-end;
     }
+
     & .card-firefox {
       align-self: center;
     }
@@ -279,17 +285,19 @@ hr {
   height: 20rem;
   margin: 10px auto;
   @include boxShadow(rgb(212, 209, 209));
-  display: flex;
+  @include flexBox(flex, center, center);
+//   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+//   align-items: center;
+//   justify-content: center;
 
   .card-body {
-    display: flex;
+    @include flexBox(flex, center, start);
+    // display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: start;
+    // align-items: center;
+    // justify-content: start;
     & img {
       margin: 20px;
       width: 50%;
@@ -315,17 +323,17 @@ hr {
 }
 .accordion-button {
   color: $veryDarkBlue;
-  font-size: $fontSize*0.9;
+  font-size: $fontSize * 0.9;
   font-weight: weight(regular);
-  
+
   .accordion-button:after {
     color: $softRed;
   }
 }
-.accordion-body{
-    color: $grayishBlue;
-    font-size: $fontSize;
-    align-items: center;
+.accordion-body {
+  color: $grayishBlue;
+  font-size: $fontSize;
+  align-items: center;
 }
 
 .btn-more-info {
@@ -354,12 +362,13 @@ hr {
 }
 
 .contact-area {
-  display: flex;
+    @include flexBox(flex, center, space-between);
+//   display: flex;
   flex-direction: column;
   @include large {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    // justify-content: space-between;
+    // align-items: center;
     margin: 20px;
   }
   & form {
@@ -376,7 +385,6 @@ hr {
       background-position: right;
       right: 0;
     }
-   
   }
 
   & .contact-btn {
@@ -388,21 +396,20 @@ hr {
       float: right;
       margin-right: 10px;
     }
-
   }
 }
 #response {
-    display: none;
+  display: none;
 }
-#response.show{
-    background-color: $softRed;
-    font-size: $fontSize* 0.7;
-    display: flex;
-    align-self: flex-start;
-    padding:  3px;
-    // position: absolute;
-    width: 100%;
-    border-radius: 3px;
+#response.show {
+  background-color: $softRed;
+  font-size: $fontSize * 0.7;
+  display: flex;
+  align-self: flex-start;
+  padding: 3px;
+  // position: absolute;
+  width: 100%;
+  border-radius: 3px;
 }
 
 .footer {
@@ -456,4 +463,26 @@ hr {
       background-color: $softRed;
     }
   }
+}
+
+// fade in elements
+
+.fade-in {
+  opacity: 0;
+  transform: translateX(250px);
+  transition: all 3s ease-out;
+}
+.fade-in.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-250px);
+  transition: all 3s ease-out;
+}
+.slide-in.appear {
+  opacity: 1;
+  transform: translateX(0);
 }
