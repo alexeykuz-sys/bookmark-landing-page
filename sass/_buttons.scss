@@ -1,12 +1,13 @@
-@mixin btn($primary:false) {
+@mixin btn($color) {
     font-size: $fontRubik;
     font-weight: weight(medium);
     padding: 10px 20px;
     border: 0;
-    @include set-bg-color($softBlue);
+    @include set-bg-color($color);
 
-    @if $primary {
+    &:hover{
         @include set-bg-color(white);
-        
+        border: 1px solid $color;  
+        color: $color;  
     }
 }
