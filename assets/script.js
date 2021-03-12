@@ -17,9 +17,9 @@ closeBtn.addEventListener("click", modalClose);
     
 const toggleElem1 = () => {
     if(document.getElementById('simple-tab').style.display = 'none'){
-        document.getElementById('simple-tab').style.display = 'flex'
-        document.getElementById('speedy-tab').style.display = 'none'
-        document.getElementById('easy-tab').style.display = 'none'
+        document.getElementById('simple-tab').style.display = 'flex';
+        document.getElementById('speedy-tab').style.display = 'none';
+        document.getElementById('easy-tab').style.display = 'none';
         
     } 
     
@@ -27,17 +27,18 @@ const toggleElem1 = () => {
 
 const toggleElem2 = () => {
     if(document.getElementById('speedy-tab').style.display = 'none'){
-    document.getElementById('speedy-tab').style.display = 'flex'
-    document.getElementById('simple-tab').style.display = 'none'
-    document.getElementById('easy-tab').style.display = 'none'
+    document.getElementById('speedy-tab').style.display = 'flex';
+    document.getElementById('simple-tab').style.display = 'none';
+    document.getElementById('easy-tab').style.display = 'none';
+    
 } 
 }
 
 const toggleElem3 = () => {
     if(document.getElementById('easy-tab').style.display = 'none'){
-    document.getElementById('easy-tab').style.display = 'flex'
-    document.getElementById('speedy-tab').style.display = 'none'
-    document.getElementById('simple-tab').style.display = 'none'
+    document.getElementById('easy-tab').style.display = 'flex';
+    document.getElementById('speedy-tab').style.display = 'none';
+    document.getElementById('simple-tab').style.display = 'none';
     }
 }
 
@@ -64,55 +65,55 @@ function validateEmail(email) {
 
 // elements fade in or slide in
 
-const faders = document.querySelectorAll(".fade-in");
-const sliders = document.querySelectorAll(".slide-in");
+// const faders = document.querySelectorAll(".fade-in");
+// const sliders = document.querySelectorAll(".slide-in");
 
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -250px 0px"
-};
+// const appearOptions = {
+//   threshold: 0,
+//   rootMargin: "0px 0px -250px 0px"
+// };
 
-const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll){
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
-  })
+// const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll){
+//   entries.forEach(entry => {
+//     if (!entry.isIntersecting) {
+//       return
+//     } else {
+//       entry.target.classList.add("appear");
+//       appearOnScroll.unobserve(entry.target);
+//     }
+//   })
   
-},appearOptions);
+// },appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-})
+// faders.forEach(fader => {
+//   appearOnScroll.observe(fader);
+// })
 
-sliders.forEach(slider => {
-  appearOnScroll.observe(slider);
-  // console.log(slider)
-})
+// sliders.forEach(slider => {
+//   appearOnScroll.observe(slider);
+//   // console.log(slider)
+// })
 
 
-const slides = document.querySelectorAll(".slides");
-const dots = document.querySelectorAll(".dot");
-// setting the index for the slides
-let slideIndex = 0;
+// const slides = document.querySelectorAll(".slides");
+// const dots = document.querySelectorAll(".dot");
+// // setting the index for the slides
+// let slideIndex = 0;
 
-const showSlides = () => {
-    slides.forEach(slide => {
-        slide.style.display = "none";
-    })
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    } 
-    dots.forEach(dot => {
-        dot.className = dot.className.replace("active", "");
-    })
+// const showSlides = () => {
+//     slides.forEach(slide => {
+//         slide.style.display = "none";
+//     })
+//     slideIndex++;
+//     if (slideIndex > slides.length) {
+//         slideIndex = 1
+//     } 
+//     dots.forEach(dot => {
+//         dot.className = dot.className.replace("active", "");
+//     })
 
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active"; 
-    setTimeout(showSlides, 3000);
-}
-showSlides()
+//     slides[slideIndex-1].style.display = "block";  
+//     dots[slideIndex-1].className += " active"; 
+//     setTimeout(showSlides, 3000);
+// }
+// showSlides()

@@ -14,7 +14,8 @@
 .navbar-toggler {
   right: 15px;
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
+  top: 0;
 }
 
 .bar-icon {
@@ -54,15 +55,16 @@
   padding: 5px 25px;
 }
 
-.login-btn-modal {
-  padding: 5px 25px;
-  @include set-bg-color($veryDarkBlue);
-  border: 1px solid white;
-  width: 100%;
-  margin-bottom: 160px;
-}
-
 //   MODAL
+
+.menu-line::after {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid $grayishBlue;
+  padding-bottom: 20px;
+  width: 100%;
+  
+}
 
 .modal-wrapper {
   display: none;
@@ -86,11 +88,8 @@
       color: set-text-color($veryDarkBlue);
     }
     & .modal-nav-wrapper {
-        @include flexBox(flex, center, space-between);
-    //   display: flex;
-    //   justify-content: space-between;
+      @include flexBox(flex, center, space-between);
       width: 100%;
-    //   align-items: center;
       margin-bottom: 10px;
     }
     & .modal-menu ul,
@@ -110,6 +109,15 @@
         padding: 20px;
         text-transform: uppercase;
         cursor: pointer;
+      }
+
+      & .login-btn-modal {
+        padding: 5px 25px;
+        @include set-bg-color($veryDarkBlue);
+        border: 1px solid white;
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 60px;
       }
     }
     & .social-media {
@@ -222,11 +230,8 @@
   }
 }
 .tab-list {
-    @include flexBox(flex, center, space-evenly);
-//   display: flex;
+  @include flexBox(flex, center, space-evenly);
   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-evenly;
   color: $veryDarkBlue;
   list-style: none;
   text-decoration: none;
@@ -236,8 +241,13 @@
   padding: 20px;
   cursor: pointer;
 
-  & li:hover {
-    color: $softRed;
+  & li {
+    padding: 10px;
+    font-weight: weight(medium);
+    color: $grayishBlue;
+    &:hover {
+      color: $softRed;
+    }
   }
 
   @include large {
@@ -245,23 +255,13 @@
   }
 }
 
-hr {
-  border: 1px solid $grayishBlue;
-  width: 100%;
-  @include large{
-      display: none;
-  }
-}
 
 // cards
 
 .card-wrapper {
   margin-top: 30px;
   @include flexBox(inline, center, center);
-//   display: inline;
-//   align-items: center;
   flex-direction: column;
-//   justify-content: center;
   height: 500px;
   @include large {
     flex-direction: row;
@@ -286,18 +286,12 @@ hr {
   margin: 10px auto;
   @include boxShadow(rgb(212, 209, 209));
   @include flexBox(flex, center, center);
-//   display: flex;
   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
 
   .card-body {
     @include flexBox(flex, center, start);
-    // display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: start;
     & img {
       margin: 20px;
       width: 50%;
@@ -362,13 +356,10 @@ hr {
 }
 
 .contact-area {
-    @include flexBox(flex, center, space-between);
-//   display: flex;
+  @include flexBox(flex, center, space-between);
   flex-direction: column;
   @include large {
     flex-direction: row;
-    // justify-content: space-between;
-    // align-items: center;
     margin: 20px;
   }
   & form {
@@ -407,7 +398,6 @@ hr {
   display: flex;
   align-self: flex-start;
   padding: 3px;
-  // position: absolute;
   width: 100%;
   border-radius: 3px;
 }
