@@ -78,7 +78,7 @@ body {
   color: #fa5757;
 }
 
-.menu-line::after {
+.menu-line:after {
   content: " ";
   display: block;
   border-bottom: 1px solid #9194a1;
