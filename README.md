@@ -1,3 +1,5 @@
+![(https://github.com/alexeykuz-sys/myRecipe-MS3/blob/4d6cf60f46b4eb9918d0ab862aa6cf49c61e59a3/static/images/amiresponsive.PNG)
+](https://github.com/alexeykuz-sys/myRecipe-MS3/blob/4d6cf60f46b4eb9918d0ab862aa6cf49c61e59a3/static/images/amiresponsive.PNG)
 
 
 # Frontend Mentor - Bookmark landing page
